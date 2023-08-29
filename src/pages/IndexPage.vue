@@ -67,7 +67,7 @@
 export default {
   data() {
     return {
-      seconds: 10,
+      seconds: 15,
       intervalId: null,
       showDialog: false,
       showFire: false,
