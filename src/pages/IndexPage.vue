@@ -1,13 +1,13 @@
 <template>
   <q-page style="overflow: hidden;" class="flex flex-center content-center">
-    <div v-if="countdown > 0">
+    <div class="LTR" v-if="countdown > 0">
       <div>
         <h3 class=" welcome">From your lover to</h3>
         <h1 class="name typing-text">Trần Thị Thảo Nguyên</h1>
         <div style="text-align: center;" class="name">{{ countdown }}</div>
       </div>
     </div>
-    <div v-if="countdown == 0 && !showFire">
+    <div class="LTR" v-if="countdown == 0 && !showFire">
       <h1 class="name">Are you ready?</h1>
       <q-btn class="" flat outline style="background-color: white;" label="Yes, I am ready" @click="play"></q-btn>
     </div>
@@ -96,7 +96,7 @@ export default {
       // Đợi 30 giây
       setTimeout(function () {
         window.location.href = "https://www.facebook.com/profile.php?id=100018139598645&sk=photos";
-      }, 60000);
+      }, 40000);
     }
   },
   mounted() {
@@ -106,6 +106,21 @@ export default {
 </script>
 
 <style>
+.LTR {
+  animation: LTR 0.3s ease-in;
+}
+
+@keyframes LTR {
+  0% {
+    transform: translateX(100px);
+  }
+
+  100% {
+    transform: translateX(000px);
+  }
+
+}
+
 @keyframes colorChange {
   0% {
     color: red;
