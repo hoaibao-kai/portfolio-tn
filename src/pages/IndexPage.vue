@@ -1,7 +1,7 @@
 <template>
   <q-page style="overflow: hidden;">
     <div style=" margin:0px 20px;" v-show="!showFire" class="LTR">
-      <h1 class="name">Are you ready?</h1>
+      <h1 class="name">Are you ready ?</h1>
       <q-btn class="" flat outline style="background-color: white;" label="Yes, I am ready" @click="play"></q-btn>
     </div>
     <iframe v-show="showFire" style="width:100vw;height: 100vh;" id="preview-frame" class="preview-desktop"
