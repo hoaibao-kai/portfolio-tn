@@ -1,13 +1,6 @@
 <template>
-  <q-page style="overflow: hidden;" class="flex flex-center content-center">
-    <div class="LTR" v-if="countdown > 0">
-      <div>
-        <h3 class=" welcome">From your lover to</h3>
-        <h1 class="name typing-text">Trần Thị Thảo Nguyên</h1>
-        <div style="text-align: center;" class="name">{{ countdown }}</div>
-      </div>
-    </div>
-    <div class="LTR" v-if="countdown == 0 && !showFire">
+  <q-page style="overflow: hidden;">
+    <div style=" margin:0px 20px;" v-show="!showFire" class="LTR">
       <h1 class="name">Are you ready?</h1>
       <q-btn class="" flat outline style="background-color: white;" label="Yes, I am ready" @click="play"></q-btn>
     </div>
@@ -100,7 +93,7 @@ export default {
     }
   },
   mounted() {
-    this.startCountdown();
+    // this.startCountdown();
   }
 };
 </script>
@@ -155,16 +148,15 @@ body {
 
 .welcome {
   font-family: "montserrat-bold", sans-serif;
-  font-size: 2.2rem;
+  font-size: 20px;
   color: white;
   text-transform: uppercase;
-  letter-spacing: .3rem;
   margin: 0 0 0.9rem 0;
 }
 
 .name {
   font-family: "montserrat-bold", serif;
-  font-size: 9rem;
+  font-size: 6rem;
   line-height: 1.133;
   color: #FFF;
 }
@@ -179,9 +171,9 @@ body {
   }
 }
 
-.typing-text {
+/* .typing-text {
   white-space: nowrap;
   overflow: hidden;
   animation: write 3s linear infinite alternate;
-}
+} */
 </style>
